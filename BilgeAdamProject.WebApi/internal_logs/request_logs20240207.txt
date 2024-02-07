@@ -1,0 +1,90 @@
+2024-02-07 18:07:19.894 +03:00 [INF] Now listening on: https://localhost:7078
+2024-02-07 18:07:19.930 +03:00 [INF] Now listening on: http://localhost:5150
+2024-02-07 18:07:19.933 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-07 18:07:19.934 +03:00 [INF] Hosting environment: Development
+2024-02-07 18:07:19.936 +03:00 [INF] Content root path: C:\Users\muharrem.tekin\Desktop\DotnetProjects\BilgeAdamProject\BilgeAdamProject.WebApi
+2024-02-07 18:07:20.575 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/index.html - null null
+2024-02-07 18:07:20.850 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/index.html - 200 null text/html;charset=utf-8 282.3609ms
+2024-02-07 18:07:21.001 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_vs/browserLink - null null
+2024-02-07 18:07:21.001 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-07 18:07:21.011 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - 200 13782 application/javascript; charset=utf-8 10.3235ms
+2024-02-07 18:07:21.334 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_vs/browserLink - 200 null text/javascript; charset=UTF-8 333.4325ms
+2024-02-07 18:07:21.390 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - null null
+2024-02-07 18:07:21.479 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 89.1748ms
+2024-02-07 18:18:48.383 +03:00 [INF] Now listening on: https://localhost:7078
+2024-02-07 18:18:48.421 +03:00 [INF] Now listening on: http://localhost:5150
+2024-02-07 18:18:48.424 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-07 18:18:48.425 +03:00 [INF] Hosting environment: Development
+2024-02-07 18:18:48.426 +03:00 [INF] Content root path: C:\Users\muharrem.tekin\Desktop\DotnetProjects\BilgeAdamProject\BilgeAdamProject.WebApi
+2024-02-07 18:18:49.456 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/index.html - null null
+2024-02-07 18:18:49.673 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/index.html - 200 null text/html;charset=utf-8 223.5463ms
+2024-02-07 18:18:49.767 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-07 18:18:49.767 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_vs/browserLink - null null
+2024-02-07 18:18:49.775 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - 200 13782 application/javascript; charset=utf-8 8.3038ms
+2024-02-07 18:18:49.813 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_vs/browserLink - 200 null text/javascript; charset=UTF-8 46.8213ms
+2024-02-07 18:18:49.888 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - null null
+2024-02-07 18:18:49.975 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 87.0078ms
+2024-02-07 18:38:01.538 +03:00 [INF] Now listening on: https://localhost:7078
+2024-02-07 18:38:01.572 +03:00 [INF] Now listening on: http://localhost:5150
+2024-02-07 18:38:01.574 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-07 18:38:01.575 +03:00 [INF] Hosting environment: Development
+2024-02-07 18:38:01.576 +03:00 [INF] Content root path: C:\Users\muharrem.tekin\Desktop\DotnetProjects\BilgeAdamProject\BilgeAdamProject.WebApi
+2024-02-07 18:38:02.910 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/index.html - null null
+2024-02-07 18:38:03.136 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/index.html - 200 null text/html;charset=utf-8 237.8362ms
+2024-02-07 18:38:03.211 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/swagger-ui-bundle.js - null null
+2024-02-07 18:38:03.211 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/swagger-ui-standalone-preset.js - null null
+2024-02-07 18:38:03.221 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_vs/browserLink - null null
+2024-02-07 18:38:03.221 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-07 18:38:03.251 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - 200 13782 application/javascript; charset=utf-8 29.3938ms
+2024-02-07 18:38:03.256 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-07 18:38:03.269 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - 200 13782 application/javascript; charset=utf-8 13.1124ms
+2024-02-07 18:38:03.277 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-02-07 18:38:03.285 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 74.0451ms
+2024-02-07 18:38:03.285 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-02-07 18:38:03.294 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 83.3105ms
+2024-02-07 18:38:03.309 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_vs/browserLink - 200 null text/javascript; charset=UTF-8 87.4974ms
+2024-02-07 18:38:03.388 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - null null
+2024-02-07 18:38:03.467 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 79.2642ms
+2024-02-07 18:38:04.372 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_vs/browserLink - null null
+2024-02-07 18:38:04.393 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_vs/browserLink - 200 null text/javascript; charset=UTF-8 20.4652ms
+2024-02-07 18:39:55.472 +03:00 [INF] Now listening on: https://localhost:7078
+2024-02-07 18:39:55.506 +03:00 [INF] Now listening on: http://localhost:5150
+2024-02-07 18:39:55.509 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-07 18:39:55.511 +03:00 [INF] Hosting environment: Development
+2024-02-07 18:39:55.513 +03:00 [INF] Content root path: C:\Users\muharrem.tekin\Desktop\DotnetProjects\BilgeAdamProject\BilgeAdamProject.WebApi
+2024-02-07 18:39:55.870 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/index.html - null null
+2024-02-07 18:39:56.087 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/index.html - 200 null text/html;charset=utf-8 224.4846ms
+2024-02-07 18:39:56.207 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-07 18:39:56.207 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_vs/browserLink - null null
+2024-02-07 18:39:56.216 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - 200 13782 application/javascript; charset=utf-8 9.3316ms
+2024-02-07 18:39:56.257 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_vs/browserLink - 200 null text/javascript; charset=UTF-8 50.3641ms
+2024-02-07 18:39:56.356 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - null null
+2024-02-07 18:39:56.440 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 84.4859ms
+2024-02-07 18:41:20.614 +03:00 [INF] Now listening on: https://localhost:7078
+2024-02-07 18:41:20.646 +03:00 [INF] Now listening on: http://localhost:5150
+2024-02-07 18:41:20.649 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-07 18:41:20.650 +03:00 [INF] Hosting environment: Development
+2024-02-07 18:41:20.651 +03:00 [INF] Content root path: C:\Users\muharrem.tekin\Desktop\DotnetProjects\BilgeAdamProject\BilgeAdamProject.WebApi
+2024-02-07 18:41:21.087 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/index.html - null null
+2024-02-07 18:41:21.294 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/index.html - 200 null text/html;charset=utf-8 216.3121ms
+2024-02-07 18:41:21.401 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-07 18:41:21.401 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_vs/browserLink - null null
+2024-02-07 18:41:21.409 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - 200 13782 application/javascript; charset=utf-8 8.1438ms
+2024-02-07 18:41:21.443 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_vs/browserLink - 200 null text/javascript; charset=UTF-8 42.7452ms
+2024-02-07 18:41:21.515 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - null null
+2024-02-07 18:41:21.594 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 79.3598ms
+2024-02-07 18:41:22.481 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-07 18:41:22.484 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - 200 13782 application/javascript; charset=utf-8 3.5895ms
+2024-02-07 18:47:08.543 +03:00 [INF] Now listening on: https://localhost:7078
+2024-02-07 18:47:08.589 +03:00 [INF] Now listening on: http://localhost:5150
+2024-02-07 18:47:08.592 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-07 18:47:08.592 +03:00 [INF] Hosting environment: Development
+2024-02-07 18:47:08.593 +03:00 [INF] Content root path: C:\Users\muharrem.tekin\Desktop\DotnetProjects\BilgeAdamProject\BilgeAdamProject.WebApi
+2024-02-07 18:47:09.117 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/index.html - null null
+2024-02-07 18:47:09.279 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/index.html - 200 null text/html;charset=utf-8 164.9663ms
+2024-02-07 18:47:09.387 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_vs/browserLink - null null
+2024-02-07 18:47:09.387 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-07 18:47:09.404 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - 200 13782 application/javascript; charset=utf-8 16.8172ms
+2024-02-07 18:47:09.436 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_vs/browserLink - 200 null text/javascript; charset=UTF-8 49.306ms
+2024-02-07 18:47:09.514 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - null null
+2024-02-07 18:47:09.574 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 60.5446ms

@@ -1,5 +1,9 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.Extensions;
+using Serilog;
+using System;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 
 namespace BilgeAdamProject.WebApi.Middlewares
@@ -16,17 +20,13 @@ namespace BilgeAdamProject.WebApi.Middlewares
 
         public Task Invoke(HttpContext httpContext)
         {
+            var requestUrl = httpContext.Request.GetDisplayUrl();
+            var clientIpAddress = httpContext.Connection.RemoteIpAddress;
+            var clNmae = httpContext.Request.Headers["User-Agent"];
 
+            Log.Information($"information - DateTime: {DateTime.UtcNow} URL: {requestUrl}, IP ADDRESS: {clientIpAddress}, {clNmae}");
+            
             return _next(httpContext);
-        }
-    }
-
-    // Extension method used to add the middleware to the HTTP request pipeline.
-    public static class RequestLoggerMiddlewareExtensions
-    {
-        public static IApplicationBuilder UseRequestLoggerMiddleware(this IApplicationBuilder builder)
-        {
-            return builder.UseMiddleware<RequestLoggerMiddleware>();
         }
     }
 }
