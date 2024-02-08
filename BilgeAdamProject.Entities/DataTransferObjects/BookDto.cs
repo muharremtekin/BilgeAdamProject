@@ -1,15 +1,14 @@
-﻿using BilgeAdamProject.Entities.Entities;
+﻿namespace BilgeAdamProject.Entities.DataTransferObjects;
 
-namespace BilgeAdamProject.Entities.DataTransferObjects;
-
-public record BookDto
+/// <summary>
+/// record type olmasını istiyordum fakat bu senaryoda class daha mantıklı.
+/// </summary>
+public class BookDto
 {
-    public Guid Id { get; init; }
-    public string ISSBN { get; init; }
-    public string Title { get; init; }
-    public string Description { get; init; }
-    public DateTime PublicationDate { get; init; }
-
-    public Author Author { get; init; }
+    public Guid Id { get; set; }
+    public string Title { get; set; }
+    public DateTime PublicationDate { get; set; }
+    public string AuthorFirstName { get; set; }
+    public string AuthorLastName { get; set; }
 }
 

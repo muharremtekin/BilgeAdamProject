@@ -1,19 +1,21 @@
-using BilgeAdamProject.Repositories.Extensions;
 using BilgeAdamProject.WebApi.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.Services.AddControllers()
+    .AddApplicationPart(typeof(BilgeAdamProject.Presentation.AssemblyReference).Assembly);
 
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.ConfigureApplicationDbContext(builder.Configuration);
 
+//builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.RegisterRepositories();
+builder.Services.RegisterServices();
 builder.Services.ConfigureSerilog();
 
-builder.Services.ConfigureApplicationDbContext(builder.Configuration);
+
 
 var app = builder.Build();
 

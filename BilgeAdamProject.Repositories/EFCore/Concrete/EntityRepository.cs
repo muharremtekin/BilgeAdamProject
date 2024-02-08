@@ -1,20 +1,27 @@
 ﻿using BilgeAdamProject.Entities.Entities;
+using BilgeAdamProject.Repositories.Context;
 using BilgeAdamProject.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace BilgeAdamProject.Repositories.EFCore.Concrete;
-
-public class EntityRepository<TEntity> : IEntityRepository<TEntity> where TEntity : BaseEntity, new()
+// TODO: Açıklama yaz.
+public abstract class EntityRepository<TEntity> : IEntityRepository<TEntity> where TEntity : BaseEntity
 {
-    private readonly DbContext dbContext;
-    protected DbSet<TEntity> entity => dbContext.Set<TEntity>();
+    protected readonly ApplicationDbContext _dbContext;
+    protected DbSet<TEntity> entity => _dbContext.Set<TEntity>();
 
-    public EntityRepository(DbContext dbContext) =>
-        this.dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
+    public EntityRepository(ApplicationDbContext dbContext) =>
+        _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
 
-    public async Task<List<TEntity>> GetAllAsync(bool noTracking = true) =>
+    public async Task<List<TEntity>> FindAllAsync(bool noTracking = true) =>
         noTracking
         ? await entity.AsNoTracking().ToListAsync()
         : await entity.ToListAsync();
+
+    public async Task<List<TEntity>> FindByCondition(Expression<Func<TEntity, bool>> expression, bool noTracking) =>
+        noTracking
+        ? await entity.Where(expression).ToListAsync()
+        : await entity.Where(expression).AsNoTracking().ToListAsync();
 }
 
