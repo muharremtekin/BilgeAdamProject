@@ -14,6 +14,7 @@ builder.Services.ConfigureApplicationDbContext(builder.Configuration);
 builder.Services.RegisterRepositories();
 builder.Services.RegisterServices();
 builder.Services.ConfigureSerilog();
+builder.Services.ConfigureCors();
 
 
 
@@ -28,6 +29,8 @@ if (app.Environment.IsDevelopment())
 app.UseRequestLoggerMiddleware();
 
 app.UseHttpsRedirection();
+
+app.UseCors("CorsPolicy");
 
 app.MapControllers();
 
