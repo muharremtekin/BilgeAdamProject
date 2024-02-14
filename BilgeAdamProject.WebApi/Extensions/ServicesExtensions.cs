@@ -13,13 +13,11 @@ public static class ServicesExtensions
 {
     public static IServiceCollection ConfigureApplicationDbContext(this IServiceCollection services, IConfiguration configuration)
     {
-
         services.AddDbContext<ApplicationDbContext>(cfg =>
         {
             var connectionString = configuration.GetConnectionString("sqlConnection");
             cfg.UseNpgsql(connectionString);
         });
-
 
         return services;
     }
@@ -42,19 +40,18 @@ public static class ServicesExtensions
             .WriteTo.File("internal_logs/request_logs.txt", rollingInterval: RollingInterval.Day);
         });
     }
-    public static IApplicationBuilder UseRequestLoggerMiddleware(this IApplicationBuilder builder)
-    {
-        return builder.UseMiddleware<RequestLoggerMiddleware>();
-    }
+    public static IApplicationBuilder UseRequestLoggerMiddleware(this IApplicationBuilder builder) =>
+        builder.UseMiddleware<RequestLoggerMiddleware>();
+
     public static IServiceCollection RegisterServices(this IServiceCollection services)
     {
         services.AddScoped<IBookService, BookManager>();
+        services.AddScoped<IBookOfAuthorService, BookOfAuthorManager>();
         return services;
     }
 
     public static IServiceCollection RegisterRepositories(this IServiceCollection services)
     {
-
         services.AddScoped<IAuthorRepository, AuthorRepository>();
         services.AddScoped<IBookRepository, BookRepository>();
         services.AddScoped<IBookOfAuthorRepository, BookOfAuthorRepository>();

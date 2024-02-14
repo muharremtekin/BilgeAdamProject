@@ -1,10 +1,19 @@
-﻿namespace BilgeAdamProject.WebApi.Utilities.AutoMapper;
+﻿using AutoMapper;
+using BilgeAdamProject.Entities.DataTransferObjects;
+using BilgeAdamProject.Entities.Entities;
 
-//public class MappingProfile : Profile
-//{
-//    protected MappingProfile()
-//    {
-//        // eklenecek
-//    }
-//}
+namespace BilgeAdamProject.WebApi.Utilities.AutoMapper;
+
+public class MappingProfile : Profile
+{
+    public MappingProfile()
+    {
+        // eklenecek
+        CreateMap<BookDtoForInsertion, Book>()
+            .ReverseMap();
+
+        CreateMap<Book, BookDto>()
+            .ReverseMap();
+    }
+}
 

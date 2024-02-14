@@ -10,11 +10,17 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.ConfigureApplicationDbContext(builder.Configuration);
 
-//builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.RegisterRepositories();
 builder.Services.RegisterServices();
 builder.Services.ConfigureSerilog();
 builder.Services.ConfigureCors();
+builder.Services.AddResponseCaching();
+
+builder.Services.AddResponseCompression(options =>
+{
+    options.EnableForHttps = true;
+});
 
 
 
@@ -27,6 +33,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 app.UseRequestLoggerMiddleware();
+
+app.UseResponseCaching();
+
+app.UseResponseCompression();
 
 app.UseHttpsRedirection();
 

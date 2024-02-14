@@ -1,14 +1,10 @@
-﻿using BilgeAdamProject.Entities.DataTransferObjects;
-using BilgeAdamProject.Entities.Entities;
+﻿using BilgeAdamProject.Entities.Entities;
 using Bogus;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
 namespace BilgeAdamProject.Repositories.Context;
-class MyClass : BaseEntity
-{
-    public string FullName { get; set; }
-}
+
 internal sealed class SeedData
 {
     static List<Author> GetAuthors()
@@ -30,13 +26,13 @@ internal sealed class SeedData
     {
         var dbContextBuilder = new DbContextOptionsBuilder();
         dbContextBuilder.UseNpgsql(configuration.GetConnectionString("sqlConnection"));
-
         var context = new ApplicationDbContext(dbContextBuilder.Options);
         //
-        var items = await context.BookOfAuthors
-            .AsNoTracking()
-            .Include(b => b.Author)
-            .ToDictionaryAsync(b => b.BookId, b => new AuthorDto { Id = b.AuthorId, FirstName = b.Author.FirstName, LastName = b.Author.LastName });
+
+        //var items = await context.BookOfAuthors
+        //    .AsNoTracking()
+        //    .Include(b => b.Author)
+        //    .ToDictionaryAsync(b => b.BookId, b => new AuthorDto { Id = b.AuthorId, FirstName = b.Author.FirstName, LastName = b.Author.LastName });
 
         //
         var authors = GetAuthors();

@@ -17,6 +17,5 @@ public sealed class BookRepository : EntityRepository<Book>, IBookRepository
         .Select(b => new BookDto { Id = b.Id, Title = b.Title, PublicationDate = b.PublicationDate })
         .AsNoTracking()
         .ToListAsync();
-
 }
 

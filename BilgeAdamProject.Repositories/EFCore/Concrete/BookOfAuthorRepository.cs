@@ -15,10 +15,16 @@ public sealed class BookOfAuthorRepository : EntityRepository<BookOfAuthor>, IBo
     /// 
     /// </summary>
     /// <returns></returns>
-    public async Task<Dictionary<Guid, AuthorDto>> GetAllAsync() =>
+    public async Task<Dictionary<Guid, AuthorDto>> GetAllAsDictionaryAsync() =>
         await entity
             .AsNoTracking()
             .Include(b => b.Author)
             .ToDictionaryAsync(b => b.BookId, b => new AuthorDto { Id = b.AuthorId, FirstName = b.Author.FirstName, LastName = b.Author.LastName });
+
+    public async Task<Author> GetAuthorByBookIdAsync(Guid bookId)
+    {
+        var bookOfAuthor = await GetSingleAsync(b => b.BookId == bookId, false, b => b.Author);
+        return bookOfAuthor.Author;
+    }
 }
 
