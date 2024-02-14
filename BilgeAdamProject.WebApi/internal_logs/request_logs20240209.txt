@@ -1338,3 +1338,515 @@ FROM dbo."Book" AS b
 2024-02-09 11:39:50.461 +03:00 [INF] Executed action BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation) in 5768.768ms
 2024-02-09 11:39:50.463 +03:00 [INF] Executed endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
 2024-02-09 11:39:50.464 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/api/books - 200 null application/json; charset=utf-8 5784.1676ms
+2024-02-09 11:45:58.369 +03:00 [INF] Now listening on: https://localhost:7078
+2024-02-09 11:45:58.430 +03:00 [INF] Now listening on: http://localhost:5150
+2024-02-09 11:45:58.434 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-09 11:45:58.437 +03:00 [INF] Hosting environment: Development
+2024-02-09 11:45:58.439 +03:00 [INF] Content root path: C:\Users\muharrem.tekin\Desktop\DotnetProjects\BilgeAdamProject\BilgeAdamProject.WebApi
+2024-02-09 11:45:58.938 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/index.html - null null
+2024-02-09 11:45:59.134 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/index.html - 200 null text/html;charset=utf-8 197.7003ms
+2024-02-09 11:45:59.237 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-09 11:45:59.237 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_vs/browserLink - null null
+2024-02-09 11:45:59.243 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - 200 13782 application/javascript; charset=utf-8 7.0703ms
+2024-02-09 11:45:59.277 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.2373ms
+2024-02-09 11:45:59.390 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - null null
+2024-02-09 11:45:59.434 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 44.3961ms
+2024-02-09 11:46:07.044 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/api/books - null null
+2024-02-09 11:46:07.059 +03:00 [INF] information - DateTime: 02/09/2024 08:46:07 URL: https://localhost:7078/api/books, IP ADDRESS: ::1, Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+2024-02-09 11:46:07.065 +03:00 [INF] CORS policy execution successful.
+2024-02-09 11:46:07.072 +03:00 [INF] Executing endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 11:46:07.100 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooksAsync() on controller BilgeAdamProject.Presentation.Controllers.BooksController (BilgeAdamProject.Presentation).
+2024-02-09 11:46:08.250 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."AuthorId", b."BookId", a."Id", a."FirstName", a."LastName"
+FROM dbo."BookOfAuthor" AS b
+INNER JOIN dbo."Author" AS a ON b."AuthorId" = a."Id"
+2024-02-09 11:46:11.244 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Title", b."PublicationDate"
+FROM dbo."Book" AS b
+2024-02-09 11:46:12.496 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BilgeAdamProject.Entities.DataTransferObjects.BookDto, BilgeAdamProject.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-09 11:46:12.514 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/api/books - null null
+2024-02-09 11:46:12.523 +03:00 [INF] information - DateTime: 02/09/2024 08:46:12 URL: https://localhost:7078/api/books, IP ADDRESS: ::1, Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+2024-02-09 11:46:12.524 +03:00 [INF] CORS policy execution successful.
+2024-02-09 11:46:12.526 +03:00 [INF] Executing endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 11:46:12.528 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooksAsync() on controller BilgeAdamProject.Presentation.Controllers.BooksController (BilgeAdamProject.Presentation).
+2024-02-09 11:46:12.611 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."AuthorId", b."BookId", a."Id", a."FirstName", a."LastName"
+FROM dbo."BookOfAuthor" AS b
+INNER JOIN dbo."Author" AS a ON b."AuthorId" = a."Id"
+2024-02-09 11:46:16.625 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Title", b."PublicationDate"
+FROM dbo."Book" AS b
+2024-02-09 11:46:17.576 +03:00 [INF] Executed action BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation) in 10470.3542ms
+2024-02-09 11:46:17.579 +03:00 [INF] Executed endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 11:46:17.590 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/api/books - 200 null application/json; charset=utf-8 10546.2735ms
+2024-02-09 11:46:18.218 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BilgeAdamProject.Entities.DataTransferObjects.BookDto, BilgeAdamProject.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-09 11:46:18.226 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/api/books - null null
+2024-02-09 11:46:18.228 +03:00 [INF] Executed action BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation) in 5698.266ms
+2024-02-09 11:46:18.231 +03:00 [INF] information - DateTime: 02/09/2024 08:46:18 URL: https://localhost:7078/api/books, IP ADDRESS: ::1, Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+2024-02-09 11:46:18.232 +03:00 [INF] Executed endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 11:46:18.234 +03:00 [INF] CORS policy execution successful.
+2024-02-09 11:46:18.235 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/api/books - 200 null application/json; charset=utf-8 5721.0752ms
+2024-02-09 11:46:18.235 +03:00 [INF] Executing endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 11:46:18.240 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooksAsync() on controller BilgeAdamProject.Presentation.Controllers.BooksController (BilgeAdamProject.Presentation).
+2024-02-09 11:46:18.260 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."AuthorId", b."BookId", a."Id", a."FirstName", a."LastName"
+FROM dbo."BookOfAuthor" AS b
+INNER JOIN dbo."Author" AS a ON b."AuthorId" = a."Id"
+2024-02-09 11:46:20.849 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Title", b."PublicationDate"
+FROM dbo."Book" AS b
+2024-02-09 11:46:21.788 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BilgeAdamProject.Entities.DataTransferObjects.BookDto, BilgeAdamProject.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-09 11:46:25.108 +03:00 [INF] Executed action BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation) in 6866.8415ms
+2024-02-09 11:46:25.110 +03:00 [INF] Executed endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 11:46:25.112 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/api/books - 200 null application/json; charset=utf-8 6885.3872ms
+2024-02-09 11:52:44.427 +03:00 [INF] Now listening on: https://localhost:7078
+2024-02-09 11:52:44.510 +03:00 [INF] Now listening on: http://localhost:5150
+2024-02-09 11:52:44.516 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-09 11:52:44.518 +03:00 [INF] Hosting environment: Development
+2024-02-09 11:52:44.520 +03:00 [INF] Content root path: C:\Users\muharrem.tekin\Desktop\DotnetProjects\BilgeAdamProject\BilgeAdamProject.WebApi
+2024-02-09 11:52:44.931 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/index.html - null null
+2024-02-09 11:52:45.114 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/index.html - 200 null text/html;charset=utf-8 185.7123ms
+2024-02-09 11:52:45.219 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-09 11:52:45.219 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_vs/browserLink - null null
+2024-02-09 11:52:45.228 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - 200 13782 application/javascript; charset=utf-8 9.4813ms
+2024-02-09 11:52:45.271 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_vs/browserLink - 200 null text/javascript; charset=UTF-8 52.8636ms
+2024-02-09 11:52:45.387 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - null null
+2024-02-09 11:52:45.437 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 50.1361ms
+2024-02-09 11:52:51.875 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7078/api/books - null null
+2024-02-09 11:52:51.884 +03:00 [INF] information - DateTime: 02/09/2024 08:52:51 URL: https://localhost:7078/api/books, IP ADDRESS: ::1, PostmanRuntime/7.36.1
+2024-02-09 11:52:51.893 +03:00 [INF] No cached response available for this request.
+2024-02-09 11:52:51.907 +03:00 [INF] Executing endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 11:52:51.930 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooksAsync() on controller BilgeAdamProject.Presentation.Controllers.BooksController (BilgeAdamProject.Presentation).
+2024-02-09 11:52:53.028 +03:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."AuthorId", b."BookId", a."Id", a."FirstName", a."LastName"
+FROM dbo."BookOfAuthor" AS b
+INNER JOIN dbo."Author" AS a ON b."AuthorId" = a."Id"
+2024-02-09 11:52:55.842 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Title", b."PublicationDate"
+FROM dbo."Book" AS b
+2024-02-09 11:52:57.012 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BilgeAdamProject.Entities.DataTransferObjects.BookDto, BilgeAdamProject.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-09 11:52:58.479 +03:00 [INF] Executed action BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation) in 6542.9501ms
+2024-02-09 11:52:58.482 +03:00 [INF] Executed endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 11:52:58.484 +03:00 [INF] The response could not be cached for this request.
+2024-02-09 11:52:58.493 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7078/api/books - 200 null application/json; charset=utf-8 6618.4147ms
+2024-02-09 11:53:10.286 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7078/api/books - null null
+2024-02-09 11:53:10.288 +03:00 [INF] information - DateTime: 02/09/2024 08:53:10 URL: https://localhost:7078/api/books, IP ADDRESS: ::1, PostmanRuntime/7.36.1
+2024-02-09 11:53:10.289 +03:00 [INF] No cached response available for this request.
+2024-02-09 11:53:10.290 +03:00 [INF] Executing endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 11:53:10.292 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooksAsync() on controller BilgeAdamProject.Presentation.Controllers.BooksController (BilgeAdamProject.Presentation).
+2024-02-09 11:53:10.346 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."AuthorId", b."BookId", a."Id", a."FirstName", a."LastName"
+FROM dbo."BookOfAuthor" AS b
+INNER JOIN dbo."Author" AS a ON b."AuthorId" = a."Id"
+2024-02-09 11:53:12.343 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Title", b."PublicationDate"
+FROM dbo."Book" AS b
+2024-02-09 11:53:13.275 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BilgeAdamProject.Entities.DataTransferObjects.BookDto, BilgeAdamProject.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-09 11:53:14.158 +03:00 [INF] Executed action BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation) in 3864.0652ms
+2024-02-09 11:53:14.159 +03:00 [INF] Executed endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 11:53:14.160 +03:00 [INF] The response could not be cached for this request.
+2024-02-09 11:53:14.161 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7078/api/books - 200 null application/json; charset=utf-8 3875.8148ms
+2024-02-09 11:53:39.137 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7078/api/books - null null
+2024-02-09 11:53:39.140 +03:00 [INF] information - DateTime: 02/09/2024 08:53:39 URL: https://localhost:7078/api/books, IP ADDRESS: ::1, PostmanRuntime/7.36.1
+2024-02-09 11:53:39.141 +03:00 [INF] No cached response available for this request.
+2024-02-09 11:53:39.141 +03:00 [INF] Executing endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 11:53:39.142 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooksAsync() on controller BilgeAdamProject.Presentation.Controllers.BooksController (BilgeAdamProject.Presentation).
+2024-02-09 11:53:39.159 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."AuthorId", b."BookId", a."Id", a."FirstName", a."LastName"
+FROM dbo."BookOfAuthor" AS b
+INNER JOIN dbo."Author" AS a ON b."AuthorId" = a."Id"
+2024-02-09 11:53:41.333 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Title", b."PublicationDate"
+FROM dbo."Book" AS b
+2024-02-09 11:53:42.261 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BilgeAdamProject.Entities.DataTransferObjects.BookDto, BilgeAdamProject.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-09 11:53:43.182 +03:00 [INF] Executed action BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation) in 4037.8271ms
+2024-02-09 11:53:43.184 +03:00 [INF] Executed endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 11:53:43.186 +03:00 [INF] The response could not be cached for this request.
+2024-02-09 11:53:43.188 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7078/api/books - 200 null application/json; charset=utf-8 4050.5351ms
+2024-02-09 11:56:49.092 +03:00 [INF] Now listening on: https://localhost:7078
+2024-02-09 11:56:49.142 +03:00 [INF] Now listening on: http://localhost:5150
+2024-02-09 11:56:49.145 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-09 11:56:49.146 +03:00 [INF] Hosting environment: Development
+2024-02-09 11:56:49.146 +03:00 [INF] Content root path: C:\Users\muharrem.tekin\Desktop\DotnetProjects\BilgeAdamProject\BilgeAdamProject.WebApi
+2024-02-09 11:56:51.961 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/index.html - null null
+2024-02-09 11:56:52.180 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/index.html - 200 null text/html;charset=utf-8 222.0001ms
+2024-02-09 11:56:52.287 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-09 11:56:52.287 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_vs/browserLink - null null
+2024-02-09 11:56:52.294 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - 200 13782 application/javascript; charset=utf-8 6.7337ms
+2024-02-09 11:56:52.331 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_vs/browserLink - 200 null text/javascript; charset=UTF-8 44.2842ms
+2024-02-09 11:56:52.415 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - null null
+2024-02-09 11:56:52.473 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 57.5175ms
+2024-02-09 11:56:55.401 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7078/api/books - null null
+2024-02-09 11:56:55.409 +03:00 [INF] information - DateTime: 02/09/2024 08:56:55 URL: https://localhost:7078/api/books, IP ADDRESS: ::1, PostmanRuntime/7.36.1
+2024-02-09 11:56:55.415 +03:00 [INF] No cached response available for this request.
+2024-02-09 11:56:55.427 +03:00 [INF] Executing endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 11:56:55.446 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooksAsync() on controller BilgeAdamProject.Presentation.Controllers.BooksController (BilgeAdamProject.Presentation).
+2024-02-09 11:56:56.543 +03:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."AuthorId", b."BookId", a."Id", a."FirstName", a."LastName"
+FROM dbo."BookOfAuthor" AS b
+INNER JOIN dbo."Author" AS a ON b."AuthorId" = a."Id"
+2024-02-09 11:56:59.288 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Title", b."PublicationDate"
+FROM dbo."Book" AS b
+2024-02-09 11:57:00.409 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BilgeAdamProject.Entities.DataTransferObjects.BookDto, BilgeAdamProject.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-09 11:57:04.217 +03:00 [INF] Executed action BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation) in 8765.5968ms
+2024-02-09 11:57:04.220 +03:00 [INF] Executed endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 11:57:04.223 +03:00 [INF] The response could not be cached for this request.
+2024-02-09 11:57:04.234 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7078/api/books - 200 null application/json; charset=utf-8 8832.7714ms
+2024-02-09 11:57:15.857 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7078/api/books - null null
+2024-02-09 11:57:15.862 +03:00 [INF] information - DateTime: 02/09/2024 08:57:15 URL: https://localhost:7078/api/books, IP ADDRESS: ::1, PostmanRuntime/7.36.1
+2024-02-09 11:57:15.863 +03:00 [INF] No cached response available for this request.
+2024-02-09 11:57:15.864 +03:00 [INF] Executing endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 11:57:15.866 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooksAsync() on controller BilgeAdamProject.Presentation.Controllers.BooksController (BilgeAdamProject.Presentation).
+2024-02-09 11:57:15.919 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."AuthorId", b."BookId", a."Id", a."FirstName", a."LastName"
+FROM dbo."BookOfAuthor" AS b
+INNER JOIN dbo."Author" AS a ON b."AuthorId" = a."Id"
+2024-02-09 11:57:17.943 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Title", b."PublicationDate"
+FROM dbo."Book" AS b
+2024-02-09 11:57:18.885 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BilgeAdamProject.Entities.DataTransferObjects.BookDto, BilgeAdamProject.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-09 11:57:22.448 +03:00 [INF] Executed action BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation) in 6579.8151ms
+2024-02-09 11:57:22.450 +03:00 [INF] Executed endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 11:57:22.452 +03:00 [INF] The response could not be cached for this request.
+2024-02-09 11:57:22.453 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7078/api/books - 200 null application/json; charset=utf-8 6596.2561ms
+2024-02-09 15:14:12.545 +03:00 [INF] Now listening on: https://localhost:7078
+2024-02-09 15:14:12.571 +03:00 [INF] Now listening on: http://localhost:5150
+2024-02-09 15:14:12.574 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-09 15:14:12.575 +03:00 [INF] Hosting environment: Development
+2024-02-09 15:14:12.576 +03:00 [INF] Content root path: C:\Users\muharrem.tekin\Desktop\DotnetProjects\BilgeAdamProject\BilgeAdamProject.WebApi
+2024-02-09 15:14:15.716 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/index.html - null null
+2024-02-09 15:14:16.053 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/index.html - 200 null text/html;charset=utf-8 349.4635ms
+2024-02-09 15:14:16.158 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_vs/browserLink - null null
+2024-02-09 15:14:16.158 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-09 15:14:16.175 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - 200 13782 application/javascript; charset=utf-8 17.0817ms
+2024-02-09 15:14:16.211 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_vs/browserLink - 200 null text/javascript; charset=UTF-8 52.5877ms
+2024-02-09 15:14:16.340 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - null null
+2024-02-09 15:14:16.410 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 69.7022ms
+2024-02-09 15:14:17.900 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7078/api/books - null null
+2024-02-09 15:14:17.908 +03:00 [INF] information - DateTime: 02/09/2024 12:14:17 URL: https://localhost:7078/api/books, IP ADDRESS: ::1, PostmanRuntime/7.36.1
+2024-02-09 15:14:17.914 +03:00 [INF] No cached response available for this request.
+2024-02-09 15:14:17.925 +03:00 [INF] Executing endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 15:14:17.944 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooksAsync() on controller BilgeAdamProject.Presentation.Controllers.BooksController (BilgeAdamProject.Presentation).
+2024-02-09 15:14:18.776 +03:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."AuthorId", b."BookId", a."Id", a."FirstName", a."LastName"
+FROM dbo."BookOfAuthor" AS b
+INNER JOIN dbo."Author" AS a ON b."AuthorId" = a."Id"
+2024-02-09 15:14:21.539 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Title", b."PublicationDate"
+FROM dbo."Book" AS b
+2024-02-09 15:14:22.665 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BilgeAdamProject.Entities.DataTransferObjects.BookDto, BilgeAdamProject.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-09 15:14:26.149 +03:00 [INF] Executed action BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation) in 8199.6877ms
+2024-02-09 15:14:26.151 +03:00 [INF] Executed endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 15:14:26.154 +03:00 [INF] The response could not be cached for this request.
+2024-02-09 15:14:26.162 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7078/api/books - 200 null application/json; charset=utf-8 8262.352ms
+2024-02-09 15:15:26.344 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7078/api/books - null null
+2024-02-09 15:15:26.348 +03:00 [INF] information - DateTime: 02/09/2024 12:15:26 URL: https://localhost:7078/api/books, IP ADDRESS: ::1, PostmanRuntime/7.36.1
+2024-02-09 15:15:26.349 +03:00 [INF] No cached response available for this request.
+2024-02-09 15:15:26.351 +03:00 [INF] Executing endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 15:15:26.352 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooksAsync() on controller BilgeAdamProject.Presentation.Controllers.BooksController (BilgeAdamProject.Presentation).
+2024-02-09 15:15:26.407 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."AuthorId", b."BookId", a."Id", a."FirstName", a."LastName"
+FROM dbo."BookOfAuthor" AS b
+INNER JOIN dbo."Author" AS a ON b."AuthorId" = a."Id"
+2024-02-09 15:15:28.414 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Title", b."PublicationDate"
+FROM dbo."Book" AS b
+2024-02-09 15:15:29.565 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BilgeAdamProject.Entities.DataTransferObjects.BookDto, BilgeAdamProject.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-09 15:15:33.075 +03:00 [INF] Executed action BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation) in 6720.4004ms
+2024-02-09 15:15:33.077 +03:00 [INF] Executed endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 15:15:33.079 +03:00 [INF] The response could not be cached for this request.
+2024-02-09 15:15:33.080 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7078/api/books - 200 null application/json; charset=utf-8 6735.9545ms
+2024-02-09 15:15:43.938 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7078/api/books - null null
+2024-02-09 15:15:43.940 +03:00 [INF] information - DateTime: 02/09/2024 12:15:43 URL: https://localhost:7078/api/books, IP ADDRESS: ::1, PostmanRuntime/7.36.1
+2024-02-09 15:15:43.941 +03:00 [INF] No cached response available for this request.
+2024-02-09 15:15:43.942 +03:00 [INF] Executing endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 15:15:43.944 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooksAsync() on controller BilgeAdamProject.Presentation.Controllers.BooksController (BilgeAdamProject.Presentation).
+2024-02-09 15:15:43.962 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."AuthorId", b."BookId", a."Id", a."FirstName", a."LastName"
+FROM dbo."BookOfAuthor" AS b
+INNER JOIN dbo."Author" AS a ON b."AuthorId" = a."Id"
+2024-02-09 15:15:46.264 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Title", b."PublicationDate"
+FROM dbo."Book" AS b
+2024-02-09 15:15:47.385 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BilgeAdamProject.Entities.DataTransferObjects.BookDto, BilgeAdamProject.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-09 15:15:51.994 +03:00 [INF] Executed action BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation) in 8048.0576ms
+2024-02-09 15:15:51.996 +03:00 [INF] Executed endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 15:15:51.998 +03:00 [INF] The response could not be cached for this request.
+2024-02-09 15:15:52.000 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7078/api/books - 200 null application/json; charset=utf-8 8061.7034ms
+2024-02-09 15:15:56.681 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/api/books - null null
+2024-02-09 15:15:56.686 +03:00 [INF] information - DateTime: 02/09/2024 12:15:56 URL: https://localhost:7078/api/books, IP ADDRESS: ::1, Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+2024-02-09 15:15:56.688 +03:00 [INF] No cached response available for this request.
+2024-02-09 15:15:56.691 +03:00 [INF] CORS policy execution successful.
+2024-02-09 15:15:56.692 +03:00 [INF] Executing endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 15:15:56.694 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooksAsync() on controller BilgeAdamProject.Presentation.Controllers.BooksController (BilgeAdamProject.Presentation).
+2024-02-09 15:15:56.705 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."AuthorId", b."BookId", a."Id", a."FirstName", a."LastName"
+FROM dbo."BookOfAuthor" AS b
+INNER JOIN dbo."Author" AS a ON b."AuthorId" = a."Id"
+2024-02-09 15:15:59.497 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Title", b."PublicationDate"
+FROM dbo."Book" AS b
+2024-02-09 15:16:00.764 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BilgeAdamProject.Entities.DataTransferObjects.BookDto, BilgeAdamProject.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-09 15:16:09.020 +03:00 [INF] Executed action BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation) in 12323.373ms
+2024-02-09 15:16:09.022 +03:00 [INF] Executed endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 15:16:09.024 +03:00 [INF] The response could not be cached for this request.
+2024-02-09 15:16:09.025 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/api/books - 200 null application/json; charset=utf-8 12343.9625ms
+2024-02-09 15:16:15.187 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/api/books - null null
+2024-02-09 15:16:15.191 +03:00 [INF] information - DateTime: 02/09/2024 12:16:15 URL: https://localhost:7078/api/books, IP ADDRESS: ::1, Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+2024-02-09 15:16:15.193 +03:00 [INF] No cached response available for this request.
+2024-02-09 15:16:15.194 +03:00 [INF] CORS policy execution successful.
+2024-02-09 15:16:15.196 +03:00 [INF] Executing endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 15:16:15.199 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooksAsync() on controller BilgeAdamProject.Presentation.Controllers.BooksController (BilgeAdamProject.Presentation).
+2024-02-09 15:16:15.211 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."AuthorId", b."BookId", a."Id", a."FirstName", a."LastName"
+FROM dbo."BookOfAuthor" AS b
+INNER JOIN dbo."Author" AS a ON b."AuthorId" = a."Id"
+2024-02-09 15:16:17.131 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Title", b."PublicationDate"
+FROM dbo."Book" AS b
+2024-02-09 15:16:18.693 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BilgeAdamProject.Entities.DataTransferObjects.BookDto, BilgeAdamProject.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-09 15:16:26.300 +03:00 [INF] Executed action BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation) in 11095.8894ms
+2024-02-09 15:16:26.302 +03:00 [INF] Executed endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 15:16:26.303 +03:00 [INF] The response could not be cached for this request.
+2024-02-09 15:16:26.304 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/api/books - 200 null application/json; charset=utf-8 11117.3085ms
+2024-02-09 15:16:33.231 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/api/books - null null
+2024-02-09 15:16:33.236 +03:00 [INF] information - DateTime: 02/09/2024 12:16:33 URL: https://localhost:7078/api/books, IP ADDRESS: ::1, Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+2024-02-09 15:16:33.238 +03:00 [INF] No cached response available for this request.
+2024-02-09 15:16:33.238 +03:00 [INF] CORS policy execution successful.
+2024-02-09 15:16:33.240 +03:00 [INF] Executing endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 15:16:33.241 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooksAsync() on controller BilgeAdamProject.Presentation.Controllers.BooksController (BilgeAdamProject.Presentation).
+2024-02-09 15:16:33.256 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."AuthorId", b."BookId", a."Id", a."FirstName", a."LastName"
+FROM dbo."BookOfAuthor" AS b
+INNER JOIN dbo."Author" AS a ON b."AuthorId" = a."Id"
+2024-02-09 15:16:34.920 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Title", b."PublicationDate"
+FROM dbo."Book" AS b
+2024-02-09 15:16:35.972 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BilgeAdamProject.Entities.DataTransferObjects.BookDto, BilgeAdamProject.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-09 15:16:43.585 +03:00 [INF] Executed action BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation) in 10340.3568ms
+2024-02-09 15:16:43.591 +03:00 [INF] Executed endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 15:16:43.593 +03:00 [INF] The response could not be cached for this request.
+2024-02-09 15:16:43.595 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/api/books - 200 null application/json; charset=utf-8 10363.6538ms
+2024-02-09 15:18:19.479 +03:00 [INF] Now listening on: https://localhost:7078
+2024-02-09 15:18:19.505 +03:00 [INF] Now listening on: http://localhost:5150
+2024-02-09 15:18:19.508 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-09 15:18:19.510 +03:00 [INF] Hosting environment: Development
+2024-02-09 15:18:19.511 +03:00 [INF] Content root path: C:\Users\muharrem.tekin\Desktop\DotnetProjects\BilgeAdamProject\BilgeAdamProject.WebApi
+2024-02-09 15:18:19.858 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/index.html - null null
+2024-02-09 15:18:20.034 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/index.html - 200 null text/html;charset=utf-8 178.0309ms
+2024-02-09 15:18:20.152 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_vs/browserLink - null null
+2024-02-09 15:18:20.152 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-09 15:18:20.174 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - 200 13782 application/javascript; charset=utf-8 21.9404ms
+2024-02-09 15:18:20.206 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_vs/browserLink - 200 null text/javascript; charset=UTF-8 53.8359ms
+2024-02-09 15:18:20.308 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - null null
+2024-02-09 15:18:20.358 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 50.0481ms
+2024-02-09 15:21:46.886 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7078/api/books - null null
+2024-02-09 15:21:46.894 +03:00 [INF] information - DateTime: 02/09/2024 12:21:46 URL: https://localhost:7078/api/books, IP ADDRESS: ::1, PostmanRuntime/7.36.1
+2024-02-09 15:21:46.900 +03:00 [INF] No cached response available for this request.
+2024-02-09 15:21:46.911 +03:00 [INF] Executing endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 15:21:46.927 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooksAsync() on controller BilgeAdamProject.Presentation.Controllers.BooksController (BilgeAdamProject.Presentation).
+2024-02-09 15:21:48.019 +03:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."AuthorId", b."BookId", a."Id", a."FirstName", a."LastName"
+FROM dbo."BookOfAuthor" AS b
+INNER JOIN dbo."Author" AS a ON b."AuthorId" = a."Id"
+2024-02-09 15:21:50.846 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Title", b."PublicationDate"
+FROM dbo."Book" AS b
+2024-02-09 15:21:52.009 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BilgeAdamProject.Entities.DataTransferObjects.BookDto, BilgeAdamProject.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-09 15:21:55.716 +03:00 [INF] Executed action BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation) in 8783.1338ms
+2024-02-09 15:21:55.719 +03:00 [INF] Executed endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 15:21:55.722 +03:00 [INF] The response could not be cached for this request.
+2024-02-09 15:21:55.729 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7078/api/books - 200 null application/json; charset=utf-8 8843.0135ms
+2024-02-09 15:22:07.155 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7078/api/books - null null
+2024-02-09 15:22:07.159 +03:00 [INF] information - DateTime: 02/09/2024 12:22:07 URL: https://localhost:7078/api/books, IP ADDRESS: ::1, PostmanRuntime/7.36.1
+2024-02-09 15:22:07.161 +03:00 [INF] No cached response available for this request.
+2024-02-09 15:22:07.163 +03:00 [INF] Executing endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 15:22:07.164 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooksAsync() on controller BilgeAdamProject.Presentation.Controllers.BooksController (BilgeAdamProject.Presentation).
+2024-02-09 15:22:07.217 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."AuthorId", b."BookId", a."Id", a."FirstName", a."LastName"
+FROM dbo."BookOfAuthor" AS b
+INNER JOIN dbo."Author" AS a ON b."AuthorId" = a."Id"
+2024-02-09 15:22:09.535 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Title", b."PublicationDate"
+FROM dbo."Book" AS b
+2024-02-09 15:22:10.466 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BilgeAdamProject.Entities.DataTransferObjects.BookDto, BilgeAdamProject.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-09 15:22:13.911 +03:00 [INF] Executed action BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation) in 6744.506ms
+2024-02-09 15:22:13.914 +03:00 [INF] Executed endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 15:22:13.916 +03:00 [INF] The response could not be cached for this request.
+2024-02-09 15:22:13.917 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7078/api/books - 200 null application/json; charset=utf-8 6762.1546ms
+2024-02-09 15:22:28.205 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/api/books - null null
+2024-02-09 15:22:28.209 +03:00 [INF] information - DateTime: 02/09/2024 12:22:28 URL: https://localhost:7078/api/books, IP ADDRESS: ::1, Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+2024-02-09 15:22:28.210 +03:00 [INF] No cached response available for this request.
+2024-02-09 15:22:28.214 +03:00 [INF] CORS policy execution successful.
+2024-02-09 15:22:28.217 +03:00 [INF] Executing endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 15:22:28.218 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooksAsync() on controller BilgeAdamProject.Presentation.Controllers.BooksController (BilgeAdamProject.Presentation).
+2024-02-09 15:22:28.258 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."AuthorId", b."BookId", a."Id", a."FirstName", a."LastName"
+FROM dbo."BookOfAuthor" AS b
+INNER JOIN dbo."Author" AS a ON b."AuthorId" = a."Id"
+2024-02-09 15:22:30.722 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Title", b."PublicationDate"
+FROM dbo."Book" AS b
+2024-02-09 15:22:31.675 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BilgeAdamProject.Entities.DataTransferObjects.BookDto, BilgeAdamProject.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-09 15:22:38.769 +03:00 [INF] Executed action BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation) in 10548.0138ms
+2024-02-09 15:22:38.771 +03:00 [INF] Executed endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 15:22:38.772 +03:00 [INF] The response could not be cached for this request.
+2024-02-09 15:22:38.773 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/api/books - 200 null application/json; charset=utf-8 10568.269ms
+2024-02-09 16:28:04.105 +03:00 [INF] Now listening on: https://localhost:7078
+2024-02-09 16:28:04.142 +03:00 [INF] Now listening on: http://localhost:5150
+2024-02-09 16:28:04.145 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-09 16:28:04.146 +03:00 [INF] Hosting environment: Development
+2024-02-09 16:28:04.147 +03:00 [INF] Content root path: C:\Users\muharrem.tekin\Desktop\DotnetProjects\BilgeAdamProject\BilgeAdamProject.WebApi
+2024-02-09 16:28:07.425 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/index.html - null null
+2024-02-09 16:28:07.601 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/index.html - 200 null text/html;charset=utf-8 178.2499ms
+2024-02-09 16:28:07.832 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-09 16:28:07.832 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_vs/browserLink - null null
+2024-02-09 16:28:07.842 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - 200 13782 application/javascript; charset=utf-8 10.7188ms
+2024-02-09 16:28:07.906 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_vs/browserLink - 200 null text/javascript; charset=UTF-8 74.7842ms
+2024-02-09 16:28:08.038 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - null null
+2024-02-09 16:28:08.092 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 53.9889ms
+2024-02-09 16:28:43.069 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/api/books - null null
+2024-02-09 16:28:43.110 +03:00 [INF] information - DateTime: 02/09/2024 13:28:43 URL: https://localhost:7078/api/books, IP ADDRESS: ::1, Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+2024-02-09 16:28:43.120 +03:00 [INF] No cached response available for this request.
+2024-02-09 16:28:43.132 +03:00 [INF] CORS policy execution successful.
+2024-02-09 16:28:43.135 +03:00 [INF] Executing endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 16:28:43.157 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooksAsync() on controller BilgeAdamProject.Presentation.Controllers.BooksController (BilgeAdamProject.Presentation).
+2024-02-09 16:28:44.243 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."AuthorId", b."BookId", a."Id", a."FirstName", a."LastName"
+FROM dbo."BookOfAuthor" AS b
+INNER JOIN dbo."Author" AS a ON b."AuthorId" = a."Id"
+2024-02-09 16:28:47.322 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Title", b."PublicationDate"
+FROM dbo."Book" AS b
+2024-02-09 16:28:48.547 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BilgeAdamProject.Entities.DataTransferObjects.BookDto, BilgeAdamProject.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-09 16:28:56.393 +03:00 [INF] Executed action BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation) in 13230.1646ms
+2024-02-09 16:28:56.395 +03:00 [INF] Executed endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 16:28:56.397 +03:00 [INF] The response could not be cached for this request.
+2024-02-09 16:28:56.406 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/api/books - 200 null application/json; charset=utf-8 13336.5917ms
+2024-02-09 16:29:06.520 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/api/books - null null
+2024-02-09 16:29:06.525 +03:00 [INF] information - DateTime: 02/09/2024 13:29:06 URL: https://localhost:7078/api/books, IP ADDRESS: ::1, Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+2024-02-09 16:29:06.531 +03:00 [INF] No cached response available for this request.
+2024-02-09 16:29:06.533 +03:00 [INF] CORS policy execution successful.
+2024-02-09 16:29:06.534 +03:00 [INF] Executing endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 16:29:06.536 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooksAsync() on controller BilgeAdamProject.Presentation.Controllers.BooksController (BilgeAdamProject.Presentation).
+2024-02-09 16:29:06.678 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."AuthorId", b."BookId", a."Id", a."FirstName", a."LastName"
+FROM dbo."BookOfAuthor" AS b
+INNER JOIN dbo."Author" AS a ON b."AuthorId" = a."Id"
+2024-02-09 16:29:08.723 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Title", b."PublicationDate"
+FROM dbo."Book" AS b
+2024-02-09 16:29:09.761 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BilgeAdamProject.Entities.DataTransferObjects.BookDto, BilgeAdamProject.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-09 16:29:09.767 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/api/books - null null
+2024-02-09 16:29:09.771 +03:00 [INF] information - DateTime: 02/09/2024 13:29:09 URL: https://localhost:7078/api/books, IP ADDRESS: ::1, Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+2024-02-09 16:29:09.773 +03:00 [INF] No cached response available for this request.
+2024-02-09 16:29:09.775 +03:00 [INF] CORS policy execution successful.
+2024-02-09 16:29:09.776 +03:00 [INF] Executing endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 16:29:09.778 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooksAsync() on controller BilgeAdamProject.Presentation.Controllers.BooksController (BilgeAdamProject.Presentation).
+2024-02-09 16:29:09.823 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."AuthorId", b."BookId", a."Id", a."FirstName", a."LastName"
+FROM dbo."BookOfAuthor" AS b
+INNER JOIN dbo."Author" AS a ON b."AuthorId" = a."Id"
+2024-02-09 16:29:15.124 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Title", b."PublicationDate"
+FROM dbo."Book" AS b
+2024-02-09 16:29:17.186 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BilgeAdamProject.Entities.DataTransferObjects.BookDto, BilgeAdamProject.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-09 16:29:17.192 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/api/books - null null
+2024-02-09 16:29:17.196 +03:00 [INF] information - DateTime: 02/09/2024 13:29:17 URL: https://localhost:7078/api/books, IP ADDRESS: ::1, Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+2024-02-09 16:29:17.197 +03:00 [INF] Executed action BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation) in 7416.0093ms
+2024-02-09 16:29:17.198 +03:00 [INF] No cached response available for this request.
+2024-02-09 16:29:17.200 +03:00 [INF] Executed endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 16:29:17.201 +03:00 [INF] CORS policy execution successful.
+2024-02-09 16:29:17.203 +03:00 [INF] The response could not be cached for this request.
+2024-02-09 16:29:17.204 +03:00 [INF] Executing endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 16:29:17.205 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/api/books - 200 null application/json; charset=utf-8 7438.514ms
+2024-02-09 16:29:17.207 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooksAsync() on controller BilgeAdamProject.Presentation.Controllers.BooksController (BilgeAdamProject.Presentation).
+2024-02-09 16:29:17.220 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."AuthorId", b."BookId", a."Id", a."FirstName", a."LastName"
+FROM dbo."BookOfAuthor" AS b
+INNER JOIN dbo."Author" AS a ON b."AuthorId" = a."Id"
+2024-02-09 16:29:18.476 +03:00 [INF] Executed action BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation) in 11932.9829ms
+2024-02-09 16:29:18.478 +03:00 [INF] Executed endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 16:29:18.479 +03:00 [INF] The response could not be cached for this request.
+2024-02-09 16:29:18.480 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/api/books - 200 null application/json; charset=utf-8 11960.2575ms
+2024-02-09 16:29:20.724 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Title", b."PublicationDate"
+FROM dbo."Book" AS b
+2024-02-09 16:29:21.790 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BilgeAdamProject.Entities.DataTransferObjects.BookDto, BilgeAdamProject.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-09 16:29:29.368 +03:00 [INF] Executed action BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation) in 12153.9279ms
+2024-02-09 16:29:29.370 +03:00 [INF] Executed endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 16:29:29.371 +03:00 [INF] The response could not be cached for this request.
+2024-02-09 16:29:29.372 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/api/books - 200 null application/json; charset=utf-8 12179.8631ms
+2024-02-09 16:29:53.373 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/api/books - null null
+2024-02-09 16:29:53.387 +03:00 [INF] information - DateTime: 02/09/2024 13:29:53 URL: https://localhost:7078/api/books, IP ADDRESS: ::1, Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+2024-02-09 16:29:53.388 +03:00 [INF] No cached response available for this request.
+2024-02-09 16:29:53.389 +03:00 [INF] CORS policy execution successful.
+2024-02-09 16:29:53.390 +03:00 [INF] Executing endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 16:29:53.391 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooksAsync() on controller BilgeAdamProject.Presentation.Controllers.BooksController (BilgeAdamProject.Presentation).
+2024-02-09 16:29:53.420 +03:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."AuthorId", b."BookId", a."Id", a."FirstName", a."LastName"
+FROM dbo."BookOfAuthor" AS b
+INNER JOIN dbo."Author" AS a ON b."AuthorId" = a."Id"
+2024-02-09 16:29:55.000 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Title", b."PublicationDate"
+FROM dbo."Book" AS b
+2024-02-09 16:29:56.125 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BilgeAdamProject.Entities.DataTransferObjects.BookDto, BilgeAdamProject.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-09 16:29:56.135 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/api/books - null null
+2024-02-09 16:29:56.146 +03:00 [INF] information - DateTime: 02/09/2024 13:29:56 URL: https://localhost:7078/api/books, IP ADDRESS: ::1, Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+2024-02-09 16:29:56.147 +03:00 [INF] No cached response available for this request.
+2024-02-09 16:29:56.149 +03:00 [INF] CORS policy execution successful.
+2024-02-09 16:29:56.150 +03:00 [INF] Executing endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 16:29:56.151 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooksAsync() on controller BilgeAdamProject.Presentation.Controllers.BooksController (BilgeAdamProject.Presentation).
+2024-02-09 16:29:56.163 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."AuthorId", b."BookId", a."Id", a."FirstName", a."LastName"
+FROM dbo."BookOfAuthor" AS b
+INNER JOIN dbo."Author" AS a ON b."AuthorId" = a."Id"
+2024-02-09 16:30:00.584 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Title", b."PublicationDate"
+FROM dbo."Book" AS b
+2024-02-09 16:30:03.208 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BilgeAdamProject.Entities.DataTransferObjects.BookDto, BilgeAdamProject.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-09 16:30:03.215 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/api/books - null null
+2024-02-09 16:30:03.217 +03:00 [INF] Executed action BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation) in 7062.5445ms
+2024-02-09 16:30:03.221 +03:00 [INF] information - DateTime: 02/09/2024 13:30:03 URL: https://localhost:7078/api/books, IP ADDRESS: ::1, Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+2024-02-09 16:30:03.223 +03:00 [INF] Executed endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 16:30:03.225 +03:00 [INF] No cached response available for this request.
+2024-02-09 16:30:03.227 +03:00 [INF] The response could not be cached for this request.
+2024-02-09 16:30:03.229 +03:00 [INF] CORS policy execution successful.
+2024-02-09 16:30:03.230 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/api/books - 200 null application/json; charset=utf-8 7096.443ms
+2024-02-09 16:30:03.231 +03:00 [INF] Executing endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 16:30:03.238 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooksAsync() on controller BilgeAdamProject.Presentation.Controllers.BooksController (BilgeAdamProject.Presentation).
+2024-02-09 16:30:03.248 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."AuthorId", b."BookId", a."Id", a."FirstName", a."LastName"
+FROM dbo."BookOfAuthor" AS b
+INNER JOIN dbo."Author" AS a ON b."AuthorId" = a."Id"
+2024-02-09 16:30:04.980 +03:00 [INF] Executed action BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation) in 11585.3041ms
+2024-02-09 16:30:04.982 +03:00 [INF] Executed endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 16:30:04.983 +03:00 [INF] The response could not be cached for this request.
+2024-02-09 16:30:04.984 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/api/books - 200 null application/json; charset=utf-8 11610.5552ms
+2024-02-09 16:30:06.608 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Title", b."PublicationDate"
+FROM dbo."Book" AS b
+2024-02-09 16:30:07.740 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BilgeAdamProject.Entities.DataTransferObjects.BookDto, BilgeAdamProject.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-09 16:30:16.309 +03:00 [INF] Executed action BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation) in 13066.6716ms
+2024-02-09 16:30:16.311 +03:00 [INF] Executed endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 16:30:16.312 +03:00 [INF] The response could not be cached for this request.
+2024-02-09 16:30:16.313 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/api/books - 200 null application/json; charset=utf-8 13098.6986ms
+2024-02-09 16:34:38.062 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/api/books - null null
+2024-02-09 16:34:38.068 +03:00 [INF] information - DateTime: 02/09/2024 13:34:38 URL: https://localhost:7078/api/books, IP ADDRESS: ::1, Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+2024-02-09 16:34:38.069 +03:00 [INF] No cached response available for this request.
+2024-02-09 16:34:38.070 +03:00 [INF] CORS policy execution successful.
+2024-02-09 16:34:38.070 +03:00 [INF] Executing endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 16:34:38.071 +03:00 [INF] Route matched with {action = "GetAllBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBooksAsync() on controller BilgeAdamProject.Presentation.Controllers.BooksController (BilgeAdamProject.Presentation).
+2024-02-09 16:34:38.096 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."AuthorId", b."BookId", a."Id", a."FirstName", a."LastName"
+FROM dbo."BookOfAuthor" AS b
+INNER JOIN dbo."Author" AS a ON b."AuthorId" = a."Id"
+2024-02-09 16:34:39.666 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Title", b."PublicationDate"
+FROM dbo."Book" AS b
+2024-02-09 16:34:40.659 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BilgeAdamProject.Entities.DataTransferObjects.BookDto, BilgeAdamProject.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-09 16:34:48.283 +03:00 [INF] Executed action BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation) in 10209.3237ms
+2024-02-09 16:34:48.285 +03:00 [INF] Executed endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetAllBooksAsync (BilgeAdamProject.Presentation)'
+2024-02-09 16:34:48.286 +03:00 [INF] The response could not be cached for this request.
+2024-02-09 16:34:48.287 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/api/books - 200 null application/json; charset=utf-8 10225.9408ms

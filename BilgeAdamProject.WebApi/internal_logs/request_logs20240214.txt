@@ -1,0 +1,233 @@
+2024-02-14 14:22:12.409 +03:00 [INF] Now listening on: https://localhost:7078
+2024-02-14 14:22:12.436 +03:00 [INF] Now listening on: http://localhost:5150
+2024-02-14 14:22:12.440 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-14 14:22:12.441 +03:00 [INF] Hosting environment: Development
+2024-02-14 14:22:12.442 +03:00 [INF] Content root path: C:\Users\muharrem.tekin\Desktop\DotnetProjects\BilgeAdamProject\BilgeAdamProject.WebApi
+2024-02-14 14:22:16.457 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/index.html - null null
+2024-02-14 14:22:16.660 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/index.html - 200 null text/html;charset=utf-8 208.449ms
+2024-02-14 14:22:16.675 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-14 14:22:16.685 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - 200 13782 application/javascript; charset=utf-8 9.9815ms
+2024-02-14 14:22:16.779 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_vs/browserLink - null null
+2024-02-14 14:22:16.875 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_vs/browserLink - 200 null text/javascript; charset=UTF-8 95.6438ms
+2024-02-14 14:22:17.097 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - null null
+2024-02-14 14:22:17.180 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 83.6893ms
+2024-02-14 14:23:14.207 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7078/api/books - application/json 153
+2024-02-14 14:23:14.220 +03:00 [INF] information - DateTime: 02/14/2024 11:23:14 URL: https://localhost:7078/api/books, IP ADDRESS: ::1, Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+2024-02-14 14:23:14.234 +03:00 [INF] CORS policy execution successful.
+2024-02-14 14:23:14.237 +03:00 [INF] Executing endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.CreateOneBook (BilgeAdamProject.Presentation)'
+2024-02-14 14:23:14.256 +03:00 [INF] Route matched with {action = "CreateOneBook", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateOneBook(BilgeAdamProject.Entities.DataTransferObjects.BookDtoForInsertion) on controller BilgeAdamProject.Presentation.Controllers.BooksController (BilgeAdamProject.Presentation).
+2024-02-14 14:23:14.444 +03:00 [INF] Executed action BilgeAdamProject.Presentation.Controllers.BooksController.CreateOneBook (BilgeAdamProject.Presentation) in 182.8225ms
+2024-02-14 14:23:14.447 +03:00 [INF] Executed endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.CreateOneBook (BilgeAdamProject.Presentation)'
+2024-02-14 14:23:14.450 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.MissingMethodException: No parameterless constructor defined for type 'BilgeAdamProject.WebApi.Utilities.AutoMapper.MappingProfile'.
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+   at AutoMapper.MapperConfigurationExpression.AddProfile(Type profileType)
+   at AutoMapper.MapperConfigurationExpression.AddMapsCore(IEnumerable`1 assembliesToScan)
+   at AutoMapper.MapperConfigurationExpression.AddMaps(IEnumerable`1 assembliesToScan)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.<>c__DisplayClass12_0.<AddAutoMapperClasses>b__5(MapperConfigurationExpression options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.<>c.<AddAutoMapperClasses>b__12_2(IServiceProvider sp)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.<>c.<AddAutoMapperClasses>b__12_3(IServiceProvider sp)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at lambda_method10(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-02-14 14:23:14.496 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7078/api/books - 500 null text/plain; charset=utf-8 288.9965ms
+2024-02-14 14:25:18.553 +03:00 [INF] Now listening on: https://localhost:7078
+2024-02-14 14:25:18.584 +03:00 [INF] Now listening on: http://localhost:5150
+2024-02-14 14:25:18.588 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-14 14:25:18.590 +03:00 [INF] Hosting environment: Development
+2024-02-14 14:25:18.590 +03:00 [INF] Content root path: C:\Users\muharrem.tekin\Desktop\DotnetProjects\BilgeAdamProject\BilgeAdamProject.WebApi
+2024-02-14 14:25:19.037 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/index.html - null null
+2024-02-14 14:25:19.211 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/index.html - 200 null text/html;charset=utf-8 176.9704ms
+2024-02-14 14:25:19.312 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-14 14:25:19.312 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_vs/browserLink - null null
+2024-02-14 14:25:19.322 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - 200 13782 application/javascript; charset=utf-8 9.601ms
+2024-02-14 14:25:19.357 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_vs/browserLink - 200 null text/javascript; charset=UTF-8 44.7213ms
+2024-02-14 14:25:19.536 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - null null
+2024-02-14 14:25:19.633 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 97.7302ms
+2024-02-14 14:25:23.564 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7078/api/books - application/json 153
+2024-02-14 14:25:23.572 +03:00 [INF] information - DateTime: 02/14/2024 11:25:23 URL: https://localhost:7078/api/books, IP ADDRESS: ::1, Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+2024-02-14 14:25:23.585 +03:00 [INF] CORS policy execution successful.
+2024-02-14 14:25:23.588 +03:00 [INF] Executing endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.CreateOneBook (BilgeAdamProject.Presentation)'
+2024-02-14 14:25:23.603 +03:00 [INF] Route matched with {action = "CreateOneBook", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateOneBook(BilgeAdamProject.Entities.DataTransferObjects.BookDtoForInsertion) on controller BilgeAdamProject.Presentation.Controllers.BooksController (BilgeAdamProject.Presentation).
+2024-02-14 14:25:39.607 +03:00 [INF] Executed DbCommand (69ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?' (DbType = DateTime), @p3='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO dbo."Book" ("Id", "Description", "PublicationDate", "Title")
+VALUES (@p0, @p1, @p2, @p3);
+2024-02-14 14:25:45.586 +03:00 [INF] Executed DbCommand (372ms) [Parameters=[@__book_Title_0='?', @__book_Description_1='?', @__book_PublicationDate_2='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Description", b."PublicationDate", b."Title"
+FROM dbo."Book" AS b
+WHERE b."Title" = @__book_Title_0 AND b."Description" = @__book_Description_1 AND b."PublicationDate" = @__book_PublicationDate_2
+LIMIT 2
+2024-02-14 14:27:13.844 +03:00 [INF] Now listening on: https://localhost:7078
+2024-02-14 14:27:13.913 +03:00 [INF] Now listening on: http://localhost:5150
+2024-02-14 14:27:13.918 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-14 14:27:13.920 +03:00 [INF] Hosting environment: Development
+2024-02-14 14:27:13.921 +03:00 [INF] Content root path: C:\Users\muharrem.tekin\Desktop\DotnetProjects\BilgeAdamProject\BilgeAdamProject.WebApi
+2024-02-14 14:27:14.337 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/index.html - null null
+2024-02-14 14:27:14.514 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/index.html - 200 null text/html;charset=utf-8 182.6819ms
+2024-02-14 14:27:14.624 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_vs/browserLink - null null
+2024-02-14 14:27:14.624 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-14 14:27:14.641 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - 200 13782 application/javascript; charset=utf-8 17.1704ms
+2024-02-14 14:27:14.675 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_vs/browserLink - 200 null text/javascript; charset=UTF-8 51.0382ms
+2024-02-14 14:27:14.798 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - null null
+2024-02-14 14:27:14.876 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 78.4133ms
+2024-02-14 14:27:20.036 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7078/api/books - application/json 153
+2024-02-14 14:27:20.046 +03:00 [INF] information - DateTime: 02/14/2024 11:27:20 URL: https://localhost:7078/api/books, IP ADDRESS: ::1, Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+2024-02-14 14:27:20.061 +03:00 [INF] CORS policy execution successful.
+2024-02-14 14:27:20.064 +03:00 [INF] Executing endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.CreateOneBook (BilgeAdamProject.Presentation)'
+2024-02-14 14:27:20.084 +03:00 [INF] Route matched with {action = "CreateOneBook", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateOneBook(BilgeAdamProject.Entities.DataTransferObjects.BookDtoForInsertion) on controller BilgeAdamProject.Presentation.Controllers.BooksController (BilgeAdamProject.Presentation).
+2024-02-14 14:27:21.154 +03:00 [INF] Executed DbCommand (61ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?' (DbType = DateTime), @p3='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO dbo."Book" ("Id", "Description", "PublicationDate", "Title")
+VALUES (@p0, @p1, @p2, @p3);
+2024-02-14 14:27:21.429 +03:00 [INF] Executed DbCommand (35ms) [Parameters=[@__book_Title_0='?', @__book_Description_1='?', @__book_PublicationDate_2='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Description", b."PublicationDate", b."Title"
+FROM dbo."Book" AS b
+WHERE b."Title" = @__book_Title_0 AND b."Description" = @__book_Description_1 AND b."PublicationDate" = @__book_PublicationDate_2
+LIMIT 2
+2024-02-14 14:27:21.451 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-02-14 14:27:21.477 +03:00 [INF] Executed action BilgeAdamProject.Presentation.Controllers.BooksController.CreateOneBook (BilgeAdamProject.Presentation) in 1387.4007ms
+2024-02-14 14:27:21.480 +03:00 [INF] Executed endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.CreateOneBook (BilgeAdamProject.Presentation)'
+2024-02-14 14:27:21.489 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7078/api/books - 200 null text/plain; charset=utf-8 1453.5288ms
+2024-02-14 15:36:43.567 +03:00 [INF] Now listening on: https://localhost:7078
+2024-02-14 15:36:43.607 +03:00 [INF] Now listening on: http://localhost:5150
+2024-02-14 15:36:43.609 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-14 15:36:43.609 +03:00 [INF] Hosting environment: Development
+2024-02-14 15:36:43.610 +03:00 [INF] Content root path: C:\Users\muharrem.tekin\Desktop\DotnetProjects\BilgeAdamProject\BilgeAdamProject.WebApi
+2024-02-14 15:36:46.785 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/index.html - null null
+2024-02-14 15:36:47.049 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/index.html - 200 null text/html;charset=utf-8 268.5976ms
+2024-02-14 15:36:47.249 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-14 15:36:47.249 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_vs/browserLink - null null
+2024-02-14 15:36:47.262 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - 200 13782 application/javascript; charset=utf-8 13.6734ms
+2024-02-14 15:36:47.308 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_vs/browserLink - 200 null text/javascript; charset=UTF-8 59.5421ms
+2024-02-14 15:36:47.463 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - null null
+2024-02-14 15:36:47.578 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 115.6163ms
+2024-02-14 15:37:17.825 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7078/api/books - application/json 157
+2024-02-14 15:37:17.840 +03:00 [INF] information - DateTime: 02/14/2024 12:37:17 URL: https://localhost:7078/api/books, IP ADDRESS: ::1, Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+2024-02-14 15:37:17.856 +03:00 [INF] CORS policy execution successful.
+2024-02-14 15:37:17.860 +03:00 [INF] Executing endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.CreateOneBook (BilgeAdamProject.Presentation)'
+2024-02-14 15:37:17.883 +03:00 [INF] Route matched with {action = "CreateOneBook", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateOneBook(BilgeAdamProject.Entities.DataTransferObjects.BookDtoForInsertion) on controller BilgeAdamProject.Presentation.Controllers.BooksController (BilgeAdamProject.Presentation).
+2024-02-14 15:37:19.084 +03:00 [INF] Executed DbCommand (65ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?' (DbType = DateTime), @p3='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO dbo."Book" ("Id", "Description", "PublicationDate", "Title")
+VALUES (@p0, @p1, @p2, @p3);
+2024-02-14 15:37:19.366 +03:00 [INF] Executed DbCommand (34ms) [Parameters=[@__book_Title_0='?', @__book_Description_1='?', @__book_PublicationDate_2='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Description", b."PublicationDate", b."Title"
+FROM dbo."Book" AS b
+WHERE b."Title" = @__book_Title_0 AND b."Description" = @__book_Description_1 AND b."PublicationDate" = @__book_PublicationDate_2
+LIMIT 2
+2024-02-14 15:37:19.424 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO dbo."BookOfAuthor" ("Id", "AuthorId", "BookId")
+VALUES (@p0, @p1, @p2);
+2024-02-14 15:37:19.433 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2024-02-14 15:37:19.438 +03:00 [INF] Executed action BilgeAdamProject.Presentation.Controllers.BooksController.CreateOneBook (BilgeAdamProject.Presentation) in 1546.7091ms
+2024-02-14 15:37:19.440 +03:00 [INF] Executed endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.CreateOneBook (BilgeAdamProject.Presentation)'
+2024-02-14 15:37:19.452 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7078/api/books - 204 null null 1627.0271ms
+2024-02-14 15:41:27.152 +03:00 [INF] Now listening on: https://localhost:7078
+2024-02-14 15:41:27.208 +03:00 [INF] Now listening on: http://localhost:5150
+2024-02-14 15:41:27.209 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-14 15:41:27.210 +03:00 [INF] Hosting environment: Development
+2024-02-14 15:41:27.211 +03:00 [INF] Content root path: C:\Users\muharrem.tekin\Desktop\DotnetProjects\BilgeAdamProject\BilgeAdamProject.WebApi
+2024-02-14 15:41:27.664 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/index.html - null null
+2024-02-14 15:41:27.875 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/index.html - 200 null text/html;charset=utf-8 213.7286ms
+2024-02-14 15:41:28.004 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-14 15:41:28.004 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_vs/browserLink - null null
+2024-02-14 15:41:28.011 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - 200 13782 application/javascript; charset=utf-8 7.3817ms
+2024-02-14 15:41:28.051 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_vs/browserLink - 200 null text/javascript; charset=UTF-8 46.6588ms
+2024-02-14 15:41:28.150 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - null null
+2024-02-14 15:41:28.231 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 81.2844ms
+2024-02-14 15:41:39.969 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7078/api/books - application/json 147
+2024-02-14 15:41:39.980 +03:00 [INF] information - DateTime: 02/14/2024 12:41:39 URL: https://localhost:7078/api/books, IP ADDRESS: ::1, Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+2024-02-14 15:41:39.994 +03:00 [INF] CORS policy execution successful.
+2024-02-14 15:41:39.996 +03:00 [INF] Executing endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.CreateOneBook (BilgeAdamProject.Presentation)'
+2024-02-14 15:41:40.017 +03:00 [INF] Route matched with {action = "CreateOneBook", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateOneBook(BilgeAdamProject.Entities.DataTransferObjects.BookDtoForInsertion) on controller BilgeAdamProject.Presentation.Controllers.BooksController (BilgeAdamProject.Presentation).
+2024-02-14 15:41:40.250 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-02-14 15:41:40.271 +03:00 [INF] Executed action BilgeAdamProject.Presentation.Controllers.BooksController.CreateOneBook (BilgeAdamProject.Presentation) in 247.1055ms
+2024-02-14 15:41:40.272 +03:00 [INF] Executed endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.CreateOneBook (BilgeAdamProject.Presentation)'
+2024-02-14 15:41:40.275 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7078/api/books - 400 null application/problem+json; charset=utf-8 306.0249ms
+2024-02-14 18:25:28.850 +03:00 [INF] Now listening on: https://localhost:7078
+2024-02-14 18:25:28.878 +03:00 [INF] Now listening on: http://localhost:5150
+2024-02-14 18:25:28.880 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-14 18:25:28.882 +03:00 [INF] Hosting environment: Development
+2024-02-14 18:25:28.884 +03:00 [INF] Content root path: C:\Users\muharrem.tekin\Desktop\DotnetProjects\BilgeAdamProject\BilgeAdamProject.WebApi
+2024-02-14 18:25:29.335 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/index.html - null null
+2024-02-14 18:25:29.505 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/index.html - 200 null text/html;charset=utf-8 174.7526ms
+2024-02-14 18:25:29.693 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-14 18:25:29.693 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/_vs/browserLink - null null
+2024-02-14 18:25:29.701 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_framework/aspnetcore-browser-refresh.js - 200 13782 application/javascript; charset=utf-8 8.5815ms
+2024-02-14 18:25:29.738 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/_vs/browserLink - 200 null text/javascript; charset=UTF-8 45.1274ms
+2024-02-14 18:25:29.861 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - null null
+2024-02-14 18:25:29.942 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 82.1365ms
+2024-02-14 18:26:09.635 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/api/books/00021be7-2fe4-41e6-89e7-7ca813c6a3a0 - null null
+2024-02-14 18:26:09.648 +03:00 [INF] information - DateTime: 02/14/2024 15:26:09 URL: https://localhost:7078/api/books/00021be7-2fe4-41e6-89e7-7ca813c6a3a0, IP ADDRESS: ::1, Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+2024-02-14 18:26:09.655 +03:00 [INF] No cached response available for this request.
+2024-02-14 18:26:09.667 +03:00 [INF] Executing endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetOneBookByIdAsync (BilgeAdamProject.Presentation)'
+2024-02-14 18:26:09.688 +03:00 [INF] Route matched with {action = "GetOneBookById", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetOneBookByIdAsync(System.Guid) on controller BilgeAdamProject.Presentation.Controllers.BooksController (BilgeAdamProject.Presentation).
+2024-02-14 18:26:10.895 +03:00 [INF] Executed DbCommand (55ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Description", b."PublicationDate", b."Title"
+FROM dbo."Book" AS b
+WHERE b."Id" = @__get_Item_0
+LIMIT 1
+2024-02-14 18:26:11.026 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@__bookId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."AuthorId", b."BookId", a."Id", a."FirstName", a."LastName"
+FROM dbo."BookOfAuthor" AS b
+INNER JOIN dbo."Author" AS a ON b."AuthorId" = a."Id"
+WHERE b."BookId" = @__bookId_0
+LIMIT 2
+2024-02-14 18:26:11.067 +03:00 [INF] Executing OkObjectResult, writing value of type 'BilgeAdamProject.Entities.DataTransferObjects.BookDto'.
+2024-02-14 18:26:11.099 +03:00 [INF] Executed action BilgeAdamProject.Presentation.Controllers.BooksController.GetOneBookByIdAsync (BilgeAdamProject.Presentation) in 1403.7584ms
+2024-02-14 18:26:11.101 +03:00 [INF] Executed endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetOneBookByIdAsync (BilgeAdamProject.Presentation)'
+2024-02-14 18:26:11.103 +03:00 [INF] The response could not be cached for this request.
+2024-02-14 18:26:11.112 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/api/books/00021be7-2fe4-41e6-89e7-7ca813c6a3a0 - 200 null application/json; charset=utf-8 1477.513ms
+2024-02-14 18:27:05.731 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7078/api/books/00021be7-2fe4-41e6-89e7-7ca813c6a3a0 - null null
+2024-02-14 18:27:05.735 +03:00 [INF] information - DateTime: 02/14/2024 15:27:05 URL: https://localhost:7078/api/books/00021be7-2fe4-41e6-89e7-7ca813c6a3a0, IP ADDRESS: ::1, Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+2024-02-14 18:27:05.736 +03:00 [INF] No cached response available for this request.
+2024-02-14 18:27:05.738 +03:00 [INF] Executing endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetOneBookByIdAsync (BilgeAdamProject.Presentation)'
+2024-02-14 18:27:05.739 +03:00 [INF] Route matched with {action = "GetOneBookById", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetOneBookByIdAsync(System.Guid) on controller BilgeAdamProject.Presentation.Controllers.BooksController (BilgeAdamProject.Presentation).
+2024-02-14 18:27:05.790 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Description", b."PublicationDate", b."Title"
+FROM dbo."Book" AS b
+WHERE b."Id" = @__get_Item_0
+LIMIT 1
+2024-02-14 18:27:05.796 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__bookId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."AuthorId", b."BookId", a."Id", a."FirstName", a."LastName"
+FROM dbo."BookOfAuthor" AS b
+INNER JOIN dbo."Author" AS a ON b."AuthorId" = a."Id"
+WHERE b."BookId" = @__bookId_0
+LIMIT 2
+2024-02-14 18:27:33.075 +03:00 [INF] Executing OkObjectResult, writing value of type 'BilgeAdamProject.Entities.DataTransferObjects.BookDto'.
+2024-02-14 18:27:33.082 +03:00 [INF] Executed action BilgeAdamProject.Presentation.Controllers.BooksController.GetOneBookByIdAsync (BilgeAdamProject.Presentation) in 27342.1454ms
+2024-02-14 18:27:33.089 +03:00 [INF] Executed endpoint 'BilgeAdamProject.Presentation.Controllers.BooksController.GetOneBookByIdAsync (BilgeAdamProject.Presentation)'
+2024-02-14 18:27:33.090 +03:00 [INF] The response could not be cached for this request.
+2024-02-14 18:27:33.091 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7078/api/books/00021be7-2fe4-41e6-89e7-7ca813c6a3a0 - 200 null application/json; charset=utf-8 27360.7892ms
