@@ -1,4 +1,6 @@
 ﻿using BilgeAdamProject.Repositories.Context;
+using BilgeAdamProject.Repositories.EFCore.Concrete;
+using BilgeAdamProject.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -13,12 +15,23 @@ public static class Registration
         services.AddDbContext<ApplicationDbContext>(cfg =>
         {
             var connectionString = configuration.GetConnectionString("sqlConnection");
+            Console.WriteLine(connectionString);
             cfg.UseNpgsql(connectionString);
         });
 
         //var seeder = new SeedData();
         //seeder.SeedAsync(configuration).GetAwaiter().GetResult();
 
+
+
+        return services;
+    }
+    public static IServiceCollection RegisterRepositories(this IServiceCollection services)
+    {
+
+        services.AddScoped<IAuthorRepository, AuthorRepository>();
+        services.AddScoped<IBookRepository, BookRepository>();
+        services.AddScoped<IBookOfAuthorRepository, BookOfAuthorRepository>();
 
         return services;
     }

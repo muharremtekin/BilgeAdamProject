@@ -1,10 +1,11 @@
 ﻿using BilgeAdamProject.Entities.DataTransferObjects;
 using BilgeAdamProject.Entities.Entities;
 
-namespace BilgeAdamProject.Repositories.Interfaces;
+namespace BilgeAdamProject.Services.Interfaces;
 
-public interface IBookOfAuthorRepository : IEntityRepository<BookOfAuthor>
+public interface IBookOfAuthorService
 {
+    Task AddAsync(Guid authorId, Guid bookId);
     Task<Dictionary<Guid, AuthorDto>> GetAllAsDictionaryAsync();
     Task<Author> GetAuthorByBookIdAsync(Guid bookId);
 }

@@ -1,19 +1,28 @@
-using BilgeAdamProject.Repositories.Extensions;
 using BilgeAdamProject.WebApi.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.Services.AddControllers()
+    .AddApplicationPart(typeof(BilgeAdamProject.Presentation.AssemblyReference).Assembly);
 
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-
-builder.Services.ConfigureSerilog();
-
 builder.Services.ConfigureApplicationDbContext(builder.Configuration);
+
+builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.RegisterRepositories();
+builder.Services.RegisterServices();
+builder.Services.ConfigureSerilog();
+builder.Services.ConfigureCors();
+builder.Services.AddResponseCaching();
+
+builder.Services.AddResponseCompression(options =>
+{
+    options.EnableForHttps = true;
+});
+
+
 
 var app = builder.Build();
 
@@ -25,7 +34,13 @@ if (app.Environment.IsDevelopment())
 }
 app.UseRequestLoggerMiddleware();
 
+app.UseResponseCaching();
+
+app.UseResponseCompression();
+
 app.UseHttpsRedirection();
+
+app.UseCors("CorsPolicy");
 
 app.MapControllers();
 

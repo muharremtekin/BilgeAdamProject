@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace BilgeAdamProject.Repositories.EFCore.EntityConfigurations;
 
-public class BookConfigurations : BaseEntityConfiguration<Book>
+public sealed class BookConfigurations : BaseEntityConfiguration<Book>
 {
     public override void Configure(EntityTypeBuilder<Book> builder)
     {
