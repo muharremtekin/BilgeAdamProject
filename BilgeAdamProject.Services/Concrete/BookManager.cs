@@ -31,6 +31,7 @@ public sealed class BookManager : IBookService
 
         foreach (BookDto dto in bookDtos)
         {
+
             var authorDto = kvp[dto.Id];
 
             dto.AuthorFirstName = authorDto.FirstName;

@@ -23,7 +23,7 @@ public class ApplicationDbContext : DbContext
         base.OnConfiguring(optionsBuilder);
         if (!optionsBuilder.IsConfigured)
         {
-            var connectionString = "Server=localhost;Database=BilgeAdamProjectDatabase;Port=5432;User ID=postgres;Password=mysecretpassword123";
+            var connectionString = "Server=bilgeadamproject-postgres-1;Database=BilgeAdamProjectDatabase;Port=5432;User ID=postgres;Password=mysecretpassword";
             optionsBuilder.UseNpgsql(connectionString);
         }
     }

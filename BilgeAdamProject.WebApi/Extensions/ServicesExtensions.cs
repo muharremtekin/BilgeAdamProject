@@ -19,6 +19,9 @@ public static class ServicesExtensions
             cfg.UseNpgsql(connectionString);
         });
 
+        //var seed = new SeedData();
+        //seed.SeedAsync(configuration).GetAwaiter().GetResult();
+
         return services;
     }
     public static void ConfigureCors(this IServiceCollection services)
@@ -47,6 +50,7 @@ public static class ServicesExtensions
     {
         services.AddScoped<IBookService, BookManager>();
         services.AddScoped<IBookOfAuthorService, BookOfAuthorManager>();
+        services.AddScoped<IAuthorService, AuthorManager>();
         return services;
     }
 
@@ -55,7 +59,6 @@ public static class ServicesExtensions
         services.AddScoped<IAuthorRepository, AuthorRepository>();
         services.AddScoped<IBookRepository, BookRepository>();
         services.AddScoped<IBookOfAuthorRepository, BookOfAuthorRepository>();
-
         return services;
     }
 }

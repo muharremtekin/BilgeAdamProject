@@ -6,8 +6,6 @@ namespace BilgeAdamProject.Presentation.Controllers;
 
 [Route("api/books")]
 [ApiController]
-//cach'leme kar etmiyor.
-//[ResponseCache(VaryByHeader = "User-Agent", Duration = 120)]
 public class BooksController : ControllerBase
 {
     private readonly IBookService _bookService;

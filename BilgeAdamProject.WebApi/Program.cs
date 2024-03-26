@@ -17,12 +17,6 @@ builder.Services.ConfigureSerilog();
 builder.Services.ConfigureCors();
 builder.Services.AddResponseCaching();
 
-builder.Services.AddResponseCompression(options =>
-{
-    options.EnableForHttps = true;
-});
-
-
 
 var app = builder.Build();
 
@@ -35,8 +29,6 @@ if (app.Environment.IsDevelopment())
 app.UseRequestLoggerMiddleware();
 
 app.UseResponseCaching();
-
-app.UseResponseCompression();
 
 app.UseHttpsRedirection();
 

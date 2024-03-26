@@ -5,7 +5,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace BilgeAdamProject.Repositories.Context;
 
-internal sealed class SeedData
+public sealed class SeedData
 {
     static List<Author> GetAuthors()
     {
