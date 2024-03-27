@@ -30,17 +30,6 @@ services:
       - POSTGRES_PASSWORD=mysecretpassword
       - POSTGRES_USER=postgres
 
-  react-app:
-    container_name: react-app
-    build: 
-      context: C:\Users\muharrem.tekin\Desktop\ReactProjects\firstvite-project
-      dockerfile: Dockerfile
-    ports:
-      - "7070:7070"
-    stdin_open: true
-    tty: true
-    volumes:
-      - C:\Users\muharrem.tekin\Desktop\ReactProjects\firstvite-project:/app
 
 
 
